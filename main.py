@@ -3,11 +3,11 @@ import os
 from openai import AzureOpenAI
 
 
-endpoint = os.getenv("ENDPOINT_URL")#, "https://openaiavisco.openai.azure.com/")
-deployment = os.getenv("DEPLOYMENT_NAME")#, "gpt-4o-mini")
-search_endpoint = os.getenv("SEARCH_ENDPOINT")#, "https://ais-giatec-vector-demo.search.windows.net")
-search_key = os.getenv("SEARCH_KEY")#, "vroP6zdJGb9lH27OAILWy104v29NAmLsJYODptAgOlAzSeAsQqJx")
-subscription_key = os.getenv("AZURE_OPENAI_API_KEY")#, "70eccac0e4ed42409ac26781cfff474a")
+endpoint = os.getenv("ENDPOINT_URL")
+deployment = os.getenv("DEPLOYMENT_NAME")
+search_endpoint = os.getenv("SEARCH_ENDPOINT")
+search_key = os.getenv("SEARCH_KEY")
+subscription_key = os.getenv("AZURE_OPENAI_API_KEY")
 
 
 st.sidebar.title("Navigation")
