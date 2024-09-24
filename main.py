@@ -16,7 +16,7 @@ option = st.sidebar.radio("", ["Consulta", "CH Query"])
 
 if option == "Consulta":
     client = AzureOpenAI(
-        azure_endpoint=endpoint,
+        azure_endpoint=endpoint,#, "https://openaiavisco.openai.azure.com/")
         api_key=subscription_key,
         api_version="2024-05-01-preview",
         )
@@ -94,7 +94,7 @@ elif option == "CH Query":
             messages= [
             {
                 "role": "system",
-                "content": "You are an AI nursing assistant that helps people find information about clinic history in retrieved data.\nALWAYS your answers should be only a resume of the clinic history. No additional text"
+                "content": "You are an AI nursing assistant that helps people find information about clinic history in retrieved data.\nALWAYS your answers should be only a resume of the clinic history.\nAll traslated to English.\n No additional text"
             },
             {
                 "role": "user",
@@ -131,7 +131,7 @@ elif option == "CH Query":
                     },
                     "query_type": "vector_simple_hybrid",
                     "in_scope": True,
-                    "role_information": "You are an AI nursing assistant that helps people find information about clinic history in retrieved data.\nALWAYS your answers should be only a resume of the clinic history. No additional text",
+                    "role_information": "You are an AI nursing assistant that helps people find information about clinic history in retrieved data.\nALWAYS your answers should be only a resume of the clinic history.\nAll traslated to English.\n No additional text",
                     "strictness": 3,
                     "top_n_documents": 6
                 }
