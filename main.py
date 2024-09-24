@@ -89,6 +89,15 @@ if option == "Consult":
 elif option == "Clinical History Query":
     # Code for the empty section
     st.title("Clinical History Query")
+    st.text("Try it using some of the following queries:")
+    st.table(
+        [
+            'María Fernandez',
+            'Jorge Ramírez',
+            'Pablo Lopez',
+            'Ana García'
+         ]
+        ) 
     consulta_ch = st.text_input("Pacient: ", placeholder="Describe your query here")
     if consulta_ch:
         
