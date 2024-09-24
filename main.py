@@ -12,9 +12,9 @@ subscription_key = os.getenv("AZURE_OPENAI_API_KEY")
 
 st.sidebar.title("Navigation")
 st.sidebar.markdown("**Select an option:**")
-option = st.sidebar.radio("", ["Consulta", "CH Query"])
+option = st.sidebar.radio("", ["Consult", "Clinical History Query"])
 
-if option == "Consulta":
+if option == "Consult":
     client = AzureOpenAI(
         azure_endpoint=endpoint,#, "https://openaiavisco.openai.azure.com/")
         api_key=subscription_key,
@@ -76,10 +76,10 @@ if option == "Consulta":
         st.text_area("Result", value=message_content, height=300)
 
     # ... your code for the consulta section ...
-elif option == "CH Query":
+elif option == "Clinical History Query":
     # Code for the empty section
-    st.title("CH Query")
-    consulta_ch = st.text_input("Paciente: ", placeholder="Describe your query here")
+    st.title("Clinical History Query")
+    consulta_ch = st.text_input("Pacient: ", placeholder="Describe your query here")
     if consulta_ch:
         
     # Initialize Azure OpenAI client with key-based authentication
