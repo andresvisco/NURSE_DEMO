@@ -23,6 +23,13 @@ if option == "Consult":
 
     # Code for the consulta section
     st.title("Nursing Admission Assistant with Azure OpenAI")
+    st.text("""Try it using some of the following queries:
+                "What are the steps for admission?",
+                "What should I do if the patient has a fever?",
+                "What are the requirements for a patient with a history of diabetes?",
+                "What are the steps for a patient with a history of hypertension?",
+                "Man, 48 Years Old, Head Pain
+            """)
     consulta = st.text_input("Enter your query:", placeholder="Describe your query here")
 
     if consulta:
