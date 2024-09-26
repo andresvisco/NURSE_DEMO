@@ -10,7 +10,7 @@ search_key = os.getenv("SEARCH_KEY")
 subscription_key = os.getenv("AZURE_OPENAI_API_KEY")
 
 
-st.sidebar.title("Navigation")
+st.sidebar.title("Navigation Of Site")
 st.sidebar.markdown("**Select an option:**")
 option = st.sidebar.radio("", ["Consult", "Clinical History Query"])
 
